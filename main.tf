@@ -19,7 +19,7 @@ resource "azurerm_static_web_app" "site" {
   tags         = var.tags
 }
 
-resource "azurerm_static_site_custom_domain" "domain" {
+resource "azurerm_static_web_app_custom_domain" "domain" {
   for_each = var.custom_domains
 
   domain_name       = each.key
