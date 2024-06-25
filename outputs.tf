@@ -1,6 +1,6 @@
 output "validation_token" {
   value = {
-    for k, v in azurerm_static_web_app_custom_domain.domain : k => v.validation_token
+    for k, v in azurerm_static_web_app_custom_domain.domain.validation_token : k => v.validation_token
   }
 }
 
