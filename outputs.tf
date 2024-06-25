@@ -3,3 +3,7 @@ output "validation_token" {
     for k, v in azurerm_static_web_app_custom_domain.domain : k => v.validation_token
   }
 }
+
+output "id" {
+  value = azurerm_static_web_app.site.id
+}
